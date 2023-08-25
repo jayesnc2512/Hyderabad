@@ -1,4 +1,86 @@
+.form-label {
+	font-weight: bold;
+	color: #333; /* Change the color as desired */
+  }
+  
+  /* Style for input and textarea fields */
+  .form-input {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	resize: none;
+	transition: border-color 0.3s, box-shadow 0.3s;
+	font-size: 16px; /* Adjust the font size as needed */
+  }
+  
+  .form-input:focus {
+	border-color: var(--orange-primary); /* Highlight border on focus */
+	box-shadow: 0 0 5px rgba(255, 165, 0, 0.8); /* Add a subtle shadow on focus */
+  }
+  
+  /* Style for the submit button */
+  .submit-button {
+	background-color: var(--green-primary);
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 18px; /* Adjust the font size as needed */
+	transition: background-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .submit-button:hover {
+	background-color: var(--dark-green); /* Darken the button color on hover */
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+.styled-content {
+	background-color: #f0f0f0;
+	padding: 20px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	margin-top: 20px;
+	display: none; /* Initially hidden */
+  }
+  
+  /* Show the content when the .show-content class is applied */
+  .show-content .styled-content {
+	display: block;
+  }
 
+/* Add these styles for the buttons */
+.buttons {
+	margin-top: 1rem;
+	display: flex;
+	flex-wrap: wrap; /* Allow buttons to wrap to the next line */
+	align-items: flex-start; /* Align buttons to the top */
+  }
+  
+  .button {
+	background-color: var(--color-orange-primary);
+	color: white;
+	border: none;
+	padding: 0.5rem 1rem;
+	margin-right: 0.5rem; /* Add space between buttons */
+	margin-bottom: 0.5rem; /* Add space below buttons */
+	cursor: pointer;
+	font-size: 1rem;
+	border-radius: 4px;
+	outline: none;
+	transition: background-color 0.3s, box-shadow 0.3s;
+  
+	/* Add an opaque background and shadow */
+	background-color: rgba(255, 165, 0, 0.8);
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .button:hover {
+	background-color: var(--color-green-primary);
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
 
 /* SIDEBAR */
 #sidebar {

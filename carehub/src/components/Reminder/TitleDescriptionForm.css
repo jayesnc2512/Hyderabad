@@ -1,0 +1,98 @@
+/* CSS class for the title */
+.modal-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333; /* Change the color as desired */
+  }
+  
+  /* CSS class for labels */
+  .form-label {
+    font-weight: bold;
+  }
+  
+  /* CSS class for input and textarea fields */
+  .form-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+    margin-bottom: 10px; /* Increase the margin to add spacing */
+  }
+  
+  /* CSS class for the submit button */
+  .submit-button {
+    background-color: var(--color-green-primary);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  /* CSS class for the close button */
+  .close-button {
+    background-color: var(--color-grey-primary);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .close-button:hover {
+    background-color: var(--color-orange-primary);
+  }
+  
+  /* Additional spacing between form elements */
+  .form-group {
+    margin-bottom: 20px; /* You can adjust this margin as needed */
+  }
+  
+  /* Adjust the spacing for buttons */
+  .modal-buttons {
+    margin-top: 20px; /* Increase the margin to add spacing */
+  }
+  
+  /* Style the custom button (if you added one) */
+  .custom-button {
+    background-color: var(--your-custom-color); /* Define your custom button color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  /* Style the custom button */
+.custom-button {
+  background-color: var(--your-custom-color); /* Define your custom button color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: background-color 0.3s; /* Add a smooth transition for background color */
+}
+
+/* Style the custom button */
+.custom-button {
+    background-color: var(--your-custom-color); /* Define your custom button color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s; /* Add a smooth transition for background color */
+  }
+  
+  /* Hover styles for the custom button */
+  .custom-button:hover {
+    background-color: var(--your-hover-color); /* Define the background color on hover */
+    /* You can also add other styles like changing text color, box-shadow, etc. */
+  }
+  

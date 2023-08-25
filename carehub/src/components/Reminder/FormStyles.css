@@ -1,0 +1,190 @@
+/* Form Styles */
+
+/* Style for form groups */
+.form-group {
+    margin-bottom: 20px; /* Add space between form groups */
+}
+
+/* Style for form labels */
+.form-label {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Style for input and textarea fields */
+.form-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    font-size: 16px;
+}
+
+.form-input:focus {
+    border-color: var(--orange-primary);
+    box-shadow: 0 0 5px rgba(255, 165, 0, 0.8);
+}
+
+/* Style for the submit button */
+.submit-button {
+    background-color: var(--green-primary);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.submit-button:hover {
+    background-color: var(--dark-green);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Add these styles for the buttons */
+.buttons {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.button {
+    background-color: var(--color-orange-primary);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 4px;
+    outline: none;
+    transition: background-color 0.3s, box-shadow 0.3s;
+
+    /* Add an opaque background and shadow */
+    background-color: rgba(255, 165, 0, 0.8);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover {
+    background-color: var(--color-green-primary);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+.submit-button,
+.button {
+    background-color: var(--color-orange-primary);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-right: 0.5rem;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 4px;
+    outline: none;
+    transition: background-color 0.3s, box-shadow 0.3s;
+
+    /* Add an opaque background and shadow */
+    background-color: rgba(255, 165, 0, 0.8);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.submit-button:hover,
+.button:hover {
+    background-color: var(--color-green-primary);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+/* Style for the "Add Image" button */
+.add-image-button {
+    background-color: var(--your-color); /* Change to your desired background color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .add-image-button:hover {
+    background-color: var(--your-hover-color); /* Change to your desired hover color */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Style for the "Add Schedule" button */
+  .add-schedule-button {
+    background-color: var(--your-schedule-color); /* Change to your desired background color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    opacity: 0.7; /* Add opacity */
+    transition: background-color 0.3s, box-shadow 0.3s, opacity 0.3s;
+  }
+  
+  .add-schedule-button:hover {
+    background-color: var(--your-schedule-hover-color); /* Change to your desired hover background color */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    opacity: 1; /* Increase opacity on hover */
+  }
+  /* Apply sans-serif font to form inputs */
+.reminder-form input[type="text"],
+.reminder-form textarea {
+  font-family: "sans-serif"; /* Change "sans-serif" to your preferred font family */
+}
+.reminder-form input[type="text"]:hover,
+.reminder-form textarea:hover {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Adjust shadow properties as needed */
+}
+/* Apply box shadow to title, name, and message inputs */
+.reminder-form #title,
+.reminder-form #name,
+.reminder-form #description {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  font-size: 16px;
+  width: 100%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+/* Add box shadow on hover for title, name, and message inputs */
+.reminder-form #title:hover,
+.reminder-form #name:hover,
+.reminder-form #description:hover {
+  border-color: var(--orange-primary); /* Change border color on hover */
+  box-shadow: 0 0 5px rgba(255, 165, 0, 0.8); /* Add box shadow on hover */
+}
+
+/* Add these styles for the cards */
+/* Add this CSS to your FormStyles.css or a separate CSS file */
+
+/* Style for the card container */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  
+  /* Style for each card */
+  .card {
+    width: 365px; /* Set your desired static card width */
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius:8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: scale(1.05); /* Add hover effect to cards */
+  }
+  
