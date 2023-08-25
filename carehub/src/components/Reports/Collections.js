@@ -59,7 +59,7 @@ const Collections = (props) => {
             {/* <button onClick={openModal}>New Collections</button> */}
 
             {/* Modal for new Collection */}
-            
+            <div style={{maxWidth:"fit-content", top:'20%'}}>
             <Modal
                 isOpen={isModalOpen}
                 onRequestClose={closeModal}
@@ -81,6 +81,7 @@ const Collections = (props) => {
                     <button onClick={closeModal}>Close</button>
                 </div>
             </Modal>
+            </div>
             </div>
     
     )

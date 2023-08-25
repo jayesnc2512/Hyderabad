@@ -21,11 +21,10 @@ import Collections from './Collections';
 import  { useEffect,  useRef } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
-import GetItems from './getItems';
+import GetItems from './GetItems';
 
 const Reports = () => {
    const [collections, setCollections] = useState();
-    const [items, setItems] = useState([]);
     const fileInputRef = useRef(null);
     const [name, setName] = useState("");
     const [date, setDate] = useState("");
@@ -135,6 +134,12 @@ const Reports = () => {
                 <CardContent className={classes.cardContent}>
                   <div className="card-header">
                     <Typography variant="h6">{collection.name}</Typography>
+                    <div className='icon-buttons'>
+
+                    <IconButton>
+                    <Delete onClick={() => collectionDelete(collection._id)} />
+                      </IconButton>
+                      </div>
                     <IconButton
                       className="expand-icon"
                       onClick={handleExpandClick}
@@ -148,7 +153,8 @@ const Reports = () => {
                     <CardContent>
 
                       <div className='card-all'>
-                        <div className='card-items'>
+
+                        {/* <div className='card-items'>
                           <Typography variant="body1">
                             Report 1
                           </Typography>
@@ -166,7 +172,8 @@ const Reports = () => {
                               <Delete />
                             </IconButton>
                           </div>
-                        </div>
+                        </div> */}
+                        <GetItems Hid={collection._id} />
                         <div className='card-new'>
                       
                           <div className='card-data'>
@@ -176,7 +183,7 @@ const Reports = () => {
                       
                           </div>
                           <div className='card-add'>
-                            <Button className={classes.add} variant="contained" >
+                            <Button className={classes.add} variant="contained" onClick={() => addItem(collection._id)}>
                               Add Report
                             </Button>
                           </div>
