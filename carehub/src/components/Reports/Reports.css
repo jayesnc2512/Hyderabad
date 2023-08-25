@@ -1,0 +1,43 @@
+.card-header {
+    display: flex;
+    flex-direction: row;
+}
+.card-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.card-new {
+    display: flex;
+    flex-direction: column;
+    margin-top: 8px;
+}
+.card-data {
+    display: flex;
+    justify-content: space-around;
+    
+}
+/* Styling for text input */
+#report-name {
+    width: 30%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  /* Styling for file input */
+  #file-input {
+    margin-bottom: 10px;
+  }
+  
+  /* Styling for date input */
+  #date-picker {
+    width: 30%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
