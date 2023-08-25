@@ -1,6 +1,6 @@
 .card-header {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 .card-items {
     display: flex;
@@ -14,7 +14,9 @@
 }
 .card-data {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
     
 }
 /* Styling for text input */
@@ -39,5 +41,14 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #766969;
+    
+    padding: 10px;
+    border-radius: 4px;
   }
   

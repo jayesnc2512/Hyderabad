@@ -17,9 +17,9 @@
 
 
   .active{
-    background-color: #78cff8;
+    background-color:transparent;
     color:#ffffff;
-	box-shadow: 5px 10px 30px rgba(41, 115, 236, 0.411);
+	/* box-shadow: 5px 10px 30px rgba(41, 115, 236, 0.411); */
 	transition: all ease 0.2s;
 }
 .active:hover{

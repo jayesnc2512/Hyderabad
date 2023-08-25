@@ -16,15 +16,15 @@ export const Navbar = (props) => {
 	}
 
   return (
-    <div>
+    <div className='navC'>
 	    <section id="content" style={props.style}>
         <nav>
 			<i onClick={props.menu} className='bx bx-menu' ></i>
 			<form action="#">
 				
 			</form>
-			<input type="checkbox" onClick={handlechecked} id="switch-mode" hidden />
-			<label htmlFor="switch-mode" className="switch-mode"></label>
+			{/* <input type="checkbox" onClick={handlechecked} id="switch-mode" hidden />
+			<label htmlFor="switch-mode" className="switch-mode"></label> */}
 			<a href="#" className="notification">
 			</a>
 			<a href="#" className="profile">
