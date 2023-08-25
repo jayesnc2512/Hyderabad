@@ -1,6 +1,27 @@
 import { useEffect, useState } from "react"
 import React from 'react'
+import {
+    Container,
+    Typography,
+    Button,
+    Card,
+    CardContent,
+    IconButton,
+    Collapse,
+    TextField,
+
+} from '@mui/material';
+import useStyles from './ReportStyle'; // Import the styles
+import Sidebar from '../Sidebar/Sidebar';
+import Navbar from '../Navbar/Navbar';
+import { ExpandMore, Share, GetApp, Visibility, Delete } from '@mui/icons-material';
+import AddCircleOutlineTwoToneIcon from '@mui/icons-material/AddCircleOutlineTwoTone';
+import './Reports.css';
+import DatePicker from './Date';
 import axios from "axios";
+import {  useRef } from 'react'
+import { Link } from 'react-router-dom'
+
 
 
 const GetItems = (props) => {
@@ -73,17 +94,27 @@ const GetItems = (props) => {
         <div>
             {items && items.map((item) => (
                 <div className="item" key={item._id}>
-                    <h4>{item.name}</h4>
-                    <button onClick={() => downloadFile(item._id)}>
-                        Download File
-                    </button>
-                    <button onClick={() => fileDelete(item._id)}>
-                        delete
-                    </button>
-                    <button onClick={() => previewFile(item._id)}>
-                        Open
-                    </button>
+                    <div className='card-items'>
+                        <Typography variant="body1">
+                            {item.name}
+                        </Typography>
+                        <div className='icon-buttons'>
+                            <IconButton>
+                                <Share />
+                            </IconButton>
+                            <IconButton>
+                                <GetApp onClick={() => downloadFile(item._id)} />
+                            </IconButton>
+                            <IconButton>
+                                <Visibility onClick={() => previewFile(item._id)} />
+                            </IconButton>
+                            <IconButton>
+                                <Delete onClick={() => fileDelete(item._id)} />
+                            </IconButton>
+                        </div>
+                    </div>
                 </div>
+                
             ))}
         </div>
     )
