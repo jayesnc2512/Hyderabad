@@ -122,10 +122,12 @@ const Reports = () => {
                   <a className="active" href="#">Reports</a>
                 </li>
               </ul>
-            </div>
-          </div>
-          <Collections userId={userId} />
+             
 
+            </div>
+            <Collections userId={userId} />
+          </div>
+          
           {/* <Button className={classes.submitButton} variant="contained" color="primary">
             New collections
           </Button> */}
@@ -134,13 +136,30 @@ const Reports = () => {
               <Card className={classes.card} key={collection._id}>
                 <CardContent className={classes.cardContent}>
                   <div className="card-header">
-                    <Typography variant="h6">{collection.name}</Typography>
+                    <div className="header">
+                    <Typography className={classes.h} variant="h6">{collection.name}</Typography>
                     <div className='icon-buttons'>
-
                     <IconButton>
                     <Delete onClick={() => collectionDelete(collection._id)} />
                       </IconButton>
                       </div>
+                    
+                      </div>
+                      <div className='card-new'>
+                      
+                          <div className='card-data'>
+                            <input type="text" id="report-name" placeholder="Report Name" onChange={(e) => setName(e.target.value)} />
+                            <input type="date" id="date-picker" onChange={(e) => setDate(e.target.value)} />
+                            <input type="file" id="file-input" ref={fileInputRef} />
+                      
+                          </div>
+                          
+                        </div>
+                      <div className='card-add'>
+                            <Button className={classes.add} variant="contained" onClick={() => addItem(collection._id)}>
+                              Add Report
+                            </Button>
+                          </div>
                     <IconButton
                       className="expand-icon"
                       onClick={handleExpandClick}
@@ -175,20 +194,7 @@ const Reports = () => {
                           </div>
                         </div> */}
                         <GetItems Hid={collection._id} />
-                        <div className='card-new'>
-                      
-                          <div className='card-data'>
-                            <input type="text" id="report-name" placeholder="Report Name" onChange={(e) => setName(e.target.value)} />
-                            <input type="date" id="date-picker" onChange={(e) => setDate(e.target.value)} />
-                            <input type="file" id="file-input" ref={fileInputRef} />
-                      
-                          </div>
-                          <div className='card-add'>
-                            <Button className={classes.add} variant="contained" onClick={() => addItem(collection._id)}>
-                              Add Report
-                            </Button>
-                          </div>
-                        </div>
+                        
                       </div>
                     </CardContent>
                   </Collapse>

@@ -33,14 +33,12 @@ const Dashboard = (props) => {
 						</li>
 					</ul>
 				</div>
-				<Link to="/pdf"  aria-current="page">
+				{/* <Link to="/pdf"  aria-current="page">
 				<div className="btn-download">
 					<i className='bx bxs-plus-circle' ></i>
 					<span className="text"> Add Collection </span>
 				</div>
-				</Link>
-
-				
+				</Link> */}
 			</div>
 			<CardsUi />
 			
