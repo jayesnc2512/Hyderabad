@@ -1,0 +1,76 @@
+/* Modal Container */
+.modal-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    max-width: 80%;
+    width: 400px;
+  }
+  
+  /* Modal Overlay */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Modal Header */
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Modal Title */
+  .modal-title {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  
+  /* Modal Close Button */
+  .modal-close {
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  /* Modal Form */
+  .modal-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Modal Input */
+  .modal-input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Modal Button */
+  .modal-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  /* Modal Button Hover */
+  .modal-button:hover {
+    background-color: #0056b3;
+  }
+  

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
+
 import Modal from 'react-modal';
 import useStyles from './ReportStyle'; // Import the styles
 
@@ -14,7 +15,7 @@ import {
     TextField,
 
 } from '@mui/material';
-import './Reports.css';
+import './Modal.css';
 import { ExpandMore, Share, GetApp, Visibility, Delete, Opacity } from '@mui/icons-material';
 
 
@@ -64,22 +65,25 @@ const Collections = (props) => {
                 isOpen={isModalOpen}
                 onRequestClose={closeModal}
                 contentLabel="Modal"
-            > <div style={{
-                left: '30%',
-                    position: 'absolute',
-            }}>
-                <h2>Add collection</h2>
-                <form onSubmit={handleSubmit}>
+                className="modal-container"
+                overlayClassName="modal-overlay"
+            > <div className="modal-header" >
+                <h2 className="modal-title">Add collection</h2>
+                <button className="modal-close" onClick={closeModal}>
+            &times;
+        </button>
+        </div>
+                <form className="modal-form" onSubmit={handleSubmit}>
                     {/* Form fields */}
-                    <input type="text" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} />
-                    <input type="date" placeholder="Date" value={date} onChange={(e) => setDate(e.target.value)} />
+                    <input className="modal-input" type="text" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} />
+                    <input className="modal-input" type="date" placeholder="Date" value={date} onChange={(e) => setDate(e.target.value)} />
                     {/* Other form fields */}
 
-                    <button type="submit">Submit</button>
+                    <button className="modal-button" type="submit">Submit</button>
                 </form>
 
-                    <button onClick={closeModal}>Close</button>
-                </div>
+                    {/* <button onClick={closeModal}>Close</button>
+                </div> */}
             </Modal>
             </div>
             </div>
