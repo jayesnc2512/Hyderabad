@@ -11,12 +11,14 @@ import Dashboard from './components/Dashboard';
 import Appointment from './components/Appointment';
 import SignUp from './components/pages/Auth/SignUp';
 import { Chat } from '@material-ui/icons';
+import KommunicateChat from './chat';
 
 const theme = createTheme(); // Create your theme instance
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
+      <KommunicateChat />
       <Router>
       
         <Routes>

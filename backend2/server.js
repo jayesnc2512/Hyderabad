@@ -1,17 +1,18 @@
 
+const dotenv = require('dotenv');
 const express = require('express');
 const bodyParser = require('body-parser');
 const cron = require('node-cron');
 const twilio = require('twilio');
 
 const app = express();
-const accountSid = 'ACaa6fa672e28b0b1565f4bf561f07109a'; 
-const authToken = 'afbe2fecdda2e9735cddcdd769fffaeb';  
+const accountSid = process.env.accountSid; 
+const authToken = process.env.authToken;  
+dotenv.config();
 
 const client = new twilio(accountSid, authToken);
 const port = 3001; // You can choose any port you prefer
-// const client = twilio('ACaa6fa672e28b0b1565f4bf561f07109a', 'afbe2fecdda2e9735cddcdd769fffaeb');
-const twilioClient = twilio('ACaa6fa672e28b0b1565f4bf561f07109a', 'afbe2fecdda2e9735cddcdd769fffaeb');
+const twilioClient = twilio(accountSid, authToken);
 // app.use(bodyParser.json());
 // CORS setup (if needed)
 app.use(function (req, res, next) {
@@ -36,7 +37,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
     //   to: formData.phoneNumber,
     // });
         // send the SMS
-        const messagingServiceSid = 'MGe9a5c5c6782d8b0c8bbd1a345b898211';
+        // const messagingServiceSid = 'MGe9a5c5c6782d8b0c8bbd1a345b898211';
+        const messagingServiceSid = 'process.env.messagingServiceSid';
+
         const message = await client.messages.create({
           from: messagingServiceSid,
           to: formData.phoneNumber,  // ← your phone number here
