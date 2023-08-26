@@ -125,7 +125,7 @@ const Reports = () => {
              
 
             </div>
-            <Collections userId={userId} />
+             <Collections userId={userId} />
           </div>
           
           {/* <Button className={classes.submitButton} variant="contained" color="primary">
