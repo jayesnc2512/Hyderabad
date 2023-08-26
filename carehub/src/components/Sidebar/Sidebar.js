@@ -1,22 +1,30 @@
 import React,{useState} from 'react'
 import { Link } from "react-router-dom";
 import '../main.css';
+import logo from "../image/logo.png"
 
 
 export const Sidebar= (props) => {
     const [selectedPage, setSelectedPage] = useState('');
 
     const handlePageClick = (page) => {
+        { page === "Appointment" && window.location.replace('http://localhost:3006/') };
+
         setSelectedPage(page);
       };
-      
+    const handleLogOut = () => {
+        localStorage.removeItem('token');
+        localStorage.removeItem('userData');
+    }
   
-  
+    <button onClick={handleLogOut}>
+        Logout
+    </button>
     return (
     
     <section id="sidebar" style={{width:props.hide}}>
     <a href="/" className="brand">
-        <i className='bx bxs-smile'></i>
+                <img src={logo} style={{ transform:'scale(50%)',marginLeft:'1.5rem'}}></img>
         <span className="text">CareHub</span>
     </a>
     <ul className="side-menu top">
@@ -47,11 +55,12 @@ export const Sidebar= (props) => {
     </ul>
     <ul className="side-menu">
        
-        <li>
-            <a href="#" className="logout">
+        <li><Link to="/" aria-current="page">
+                    <a className="logout" onClick={handleLogOut}>
                 <i className='bx bxs-log-out-circle' ></i>
                 <span className="text">Logout</span>
-            </a>
+                    </a>
+                </Link>
         </li>
     </ul>
 </section>

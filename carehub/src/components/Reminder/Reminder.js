@@ -1,13 +1,36 @@
-import React, { useState } from 'react';
+import React, { useState, Component } from 'react';
 import './FormStyles.css';
 import Sidebar from '../Sidebar/Sidebar';
 import Navbar from '../Navbar/Navbar';
 import '../main.css';
 
 const Reminder = (props) => {
+ 
+    // super(props);
+    // this.state = {
+    //   name: '',
+    //   message: '',
+    //   phoneNumber: '', // Add a field for the phone number
+    // };
+  
+    // handleSubmit = (e) => {
+    //     e.preventDefault();
+
+    //     // Ensure that all required fields are filled
+    //     if (!this.state.name || !this.state.message || !this.state.phoneNumber) {
+    //         alert('Please fill out all fields');
+    //         return;
+    //     }
+
+        // Send the form data to the server
+       
+    // handleChange = (e) => {
+    //     this.setState({ [e.target.name]: e.target.value });
+    // };
+
   const [bool, SetBool] = useState(false);
   const [isFormOpen, setIsFormOpen] = useState(false);
-  const [title, setTitle] = useState('');
+  const [phone, setPhone] = useState('');
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
   const [image, setImage] = useState(null); // Store the selected image file
@@ -20,24 +43,52 @@ const Reminder = (props) => {
   function toggleForm() {
     setIsFormOpen(!isFormOpen);
   }
+  
 
   function handleSubmit(event) {
     event.preventDefault();
 
     // Create a new card object with the form data and the selected image
     const newCard = {
-      title: title,
       name: name,
+      phone: phone,
       description: description,
       image: URL.createObjectURL(image), // Convert the selected image to a data URL
     };
-
+    const sendData = {
+      name: name,
+      message: description,
+      phoneNumber: phone
+    }
     setCards([...cards, newCard]);
-    setTitle('');
     setName('');
+    setPhone('');
     setDescription('');
     setImage(null); // Clear the selected image
+  
+   
+    fetch('http://localhost:3001/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(sendData),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        // Handle the response from the server if needed
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
   }
+
+  
+
+
+
+
 
   function handleImageChange(event) {
     const selectedImage = event.target.files[0];
@@ -92,24 +143,24 @@ const Reminder = (props) => {
             {isFormOpen && (
               <form className="reminder-form" onSubmit={handleSubmit}>
                 <div className="form-group">
-                  <label htmlFor="title">Title :</label>
+                  <label htmlFor="title">Name :</label>
                   <input
                     type="text"
                     id="title"
                     name="title"
-                    value={title}
-                    onChange={(e) => setTitle(e.target.value)}
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
                     required
                   />
                 </div>
                 <div className="form-group">
-                  <label htmlFor="name">Name :</label>
+                  <label htmlFor="name">Phone No. :</label>
                   <input
-                    type="text"
+                    type="phone"
                     id="name"
                     name="name"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
                     required
                   />
                 </div>

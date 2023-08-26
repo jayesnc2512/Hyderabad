@@ -4,6 +4,7 @@ import {MdFingerprint} from 'react-icons/md';
 import {FaBars, FaTimes} from 'react-icons/fa';
 import { Button } from './Button';
 import './NavbarH.css';
+import logo from './image/logo.png'
 import { IconContext } from 'react-icons/lib';
 
 function NavbarH() {
@@ -64,7 +65,7 @@ function NavbarH() {
         <div className={nav ? "nav active" : "nav"}>
             <div className="navbar-container container">
                 <Link to='/' className="navbar-logo" onClick={closeMobileMenu}>
-                    <MdFingerprint className='navbar-icon' />
+              <img src={ logo} style={{transform:'scale(50%)',marginLeft:'1.5rem'}} />
                     CareHub
                 </Link>
                 <div className="menu-icon" onClick={handleClick} >

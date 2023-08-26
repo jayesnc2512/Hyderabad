@@ -10,6 +10,7 @@ import Reminder from './components/Reminder/Reminder';
 import Dashboard from './components/Dashboard';
 import Appointment from './components/Appointment';
 import SignUp from './components/pages/Auth/SignUp';
+import { Chat } from '@material-ui/icons';
 
 const theme = createTheme(); // Create your theme instance
 
@@ -28,6 +29,7 @@ function App() {
           <Route path="/dashboard" element={<Dashboard/>} />
           <Route path="/Appointment" element={<Appointment />} />
           <Route path="/logOut" element={<Home />} />
+
 
         </Routes>
       </Router>

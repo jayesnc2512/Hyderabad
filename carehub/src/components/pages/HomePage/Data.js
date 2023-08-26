@@ -1,3 +1,4 @@
+
 export const homeObjOne = {
     lightBg: false,
     lightText: true,
@@ -10,7 +11,7 @@ export const homeObjOne = {
     imgStart: '',
     img: 'images/Bg.png',
     alt: 'BAckground',
-    ToLink: 'Appointment'
+   ToLink: 'Appointment'
   };
   export const homeObjTwo = {
     lightBg: false,

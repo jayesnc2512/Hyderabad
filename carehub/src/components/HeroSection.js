@@ -17,7 +17,10 @@ function HeroSection({
   alt,
   imgStart,
   ToLink
-}) {
+})
+
+{
+
   return (
     <>
       <div
