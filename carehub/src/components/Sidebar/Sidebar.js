@@ -47,8 +47,8 @@ export const Sidebar= (props) => {
             </Link>
         </li>
         <li className={selectedPage === 'Reports' ? 'active' : ''}>
-        <Link to="/Reports"  aria-current="page">
-                <i className='bx bxs-doughnut-chart' ></i>
+        <Link to="/Reports"  aria-current="page" onClick={() => handlePageClick('Reports')}>
+                <i className='bx bxs-file' ></i>
                 <span className="text">Reports</span>
             </Link>
         </li>

@@ -1,3 +1,9 @@
+.head-title{
+  margin-bottom: 5px;
+}
+#content::-webkit-scrollbar {
+  display: none;
+}
 .card-header {
     display: flex;
     flex-direction: column;
@@ -6,6 +12,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+.card {
+  box-shadow: 0 30px 30px -25px rgba(#4133B7, .25);
+  border-radius: 16px;
 }
 .card-new {
     display: flex;
